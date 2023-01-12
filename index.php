@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
     
 <head>
   <meta charset="UTF-8">
@@ -29,8 +29,8 @@ try{
 echo "<h2>Lista de Mulheres com idade superior a 20 anos: </h2>";
 try{
 
-    //query eleciona mulheres com idade superior a 20 anos
-    $query_mulheres = "SELECT nome,sexo,cpf,nascimento,email,celular,profissao_id FROM dz_dev_test.pessoas WHERE TIMESTAMPDIFF(YEAR,nascimento,CURDATE()) >=20 AND sexo LIKE 'Feminino'";
+    //query seleciona mulheres com idade superior a 20 anos
+    $query_mulheres = "SELECT nome,sexo,cpf,nascimento,email,celular,profissao_id FROM dz_dev_test.pessoas WHERE TIMESTAMPDIFF(YEAR,nascimento,CURDATE()) >20 AND sexo LIKE 'Feminino'";
     $result_mulheres = $conn->prepare($query_mulheres);
     $result_mulheres->execute();  //executa a query para obter os valores
 
